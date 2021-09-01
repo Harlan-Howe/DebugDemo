@@ -10,6 +10,7 @@ class MyZZMTestCase(unittest.TestCase):
         expected = "5\thop \n7\tclap\n"
         self.assertEqual(expected, output, "basic string did not match")
 
+    @unittest.skip("Skipping test b. Get test a working first.")
     def test_b_hop_and_clap(self):
         zmm = ZorkMazeManager(hop_interval=5, clap_interval=7, pat_interval=11, num_vals=40)
         output = zmm.__str__()
@@ -17,6 +18,7 @@ class MyZZMTestCase(unittest.TestCase):
                    "\n28\tclap\n30\thop \n33\tpat \n35\thop \tclap\n"
         self.assertEqual(expected, output, "hop_and_clap string did not match.")
 
+    @unittest.skip("Skipping test c. Get test b working first.")
     def test_c_hop_and_pat(self):
         zmm = ZorkMazeManager(hop_interval=5, clap_interval=7, pat_interval=11, num_vals=60)
         output = zmm.__str__()
@@ -25,6 +27,7 @@ class MyZZMTestCase(unittest.TestCase):
                    "\n49\tclap\n50\thop \n55\thop \tpat \n56\tclap\n"
         self.assertEqual(expected, output, "hop_and_pat string did not match.")
 
+    @unittest.skip("Skipping test d. Get test c working first.")
     def test_d_clap_and_pat(self):
         zmm = ZorkMazeManager(hop_interval=5, clap_interval=7, pat_interval=11, num_vals=80)
         output = zmm.__str__()
@@ -34,6 +37,7 @@ class MyZZMTestCase(unittest.TestCase):
                    "\tclap\n75\thop \n77\tclap\tpat \n"
         self.assertEqual(expected, output, "clap_and_pat string did not match.")
 
+    @unittest.skip("Skipping test e. Get test d working first.")
     def test_e_short_hop_clap_pat(self):
         zmm = ZorkMazeManager(hop_interval=3, clap_interval=4, pat_interval=5, num_vals=80)
         output = zmm.__str__()
@@ -46,6 +50,7 @@ class MyZZMTestCase(unittest.TestCase):
                    "\n76\tclap\n78\thop \n"
         self.assertEqual(expected, output, "short version of hop/clap/pat didn't work.")
 
+    @unittest.skip("Skipping test f. Get test e working first.")
     def test_f_long_hop_clap_pat(self):
         zmm = ZorkMazeManager(hop_interval=3, pat_interval=5, clap_interval=7, num_vals=200)
         output = zmm.__str__()
