@@ -1,8 +1,8 @@
-from typing import Generic, TypeVar
+from typing import Generic, TypeVar, List, Dict
 T = TypeVar("T")
 
-ContentRow = list[T]
-Sparse_List = dict[int, ContentRow]
+ContentRow = List[T]
+Sparse_List = Dict[int, ContentRow]
 
 tab_char = "\t"
 return_char = "\n"
